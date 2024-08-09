@@ -1,0 +1,8 @@
+#!name=b612
+#!desc=b612
+
+[Script]
+b612 = type=http-response, pattern=^https?:\/\/user-b612-api.snow.me\/v1\/(purchase\/subscription\/subscriber\/status|purchase\/item\/user\/info), script-path=, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% user-b612-api.snow.me,content-b612-api.snow.me
